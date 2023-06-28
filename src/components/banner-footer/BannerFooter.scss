@@ -1,0 +1,95 @@
+.banner-footer-container {
+  padding: 0 70px;
+  .banner-footer {
+    background: white;
+    height: 180px;
+    width: 970px;
+    margin-top: -90px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    padding: 40px 0px;
+    position: absolute;
+    box-shadow: 0px 10px 10px #cfcfcf;
+
+    .verticalLine {
+      height: 50%;
+      align-self: center;
+      width: 1px;
+      background-color: #909090;
+    }
+
+    .banner-elements {
+      display: block;
+      width: 30em;
+      text-decoration: none;
+      text-align: center;
+
+      .banner-arrow-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .banner-hide {
+        display: none;
+        background-color: rgb(119, 29, 29);
+        border-radius: 50px;
+        width: 50px;
+        height: 50px;
+      }
+    }
+    .banner-elements:hover {
+      padding-top: 11px;
+      height: 220px;
+      margin-top: -61px;
+      background-color: #1188bc;
+      border-radius: 10px;
+
+      .banner-items {
+        color: white;
+      }
+
+      .banner-hide {
+        display: block;
+        color: grey;
+        background-color: white;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .banner-footer-container {
+    .banner-footer {
+      display: none;
+    }
+  }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+  .banner-footer-container {
+    .banner-footer {
+      display: none;
+    }
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .banner-footer-container {
+    .banner-footer {
+      width: 550px;
+
+      .banner-elements {
+        width: 24em;
+      }
+    }
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .banner-footer-container {
+    .banner-footer {
+      width: 790px;
+    }
+  }
+}

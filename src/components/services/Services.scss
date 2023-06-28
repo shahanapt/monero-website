@@ -1,0 +1,109 @@
+.services-container {
+  background-color: #f9f9f9;
+  padding: 20px;
+  height: 80vh;
+  align-items: center;
+  justify-content: center;
+  .services-text {
+    width: 370px;
+    padding: 10px;
+    h4 {
+      font-weight: 700;
+      span {
+        color: #1188bc;
+      }
+    }
+  }
+  .services-card-div {
+    gap: 40px;
+
+    .services-card {
+      width: 17rem;
+      /* border-radius: 26px; */
+      border: none;
+      background-color: #f9f9f9;
+
+      img {
+        border-radius: 10px;
+        width: 17rem;
+      }
+      h5 {
+        color: navy;
+        margin: 10px 0px;
+      }
+      p {
+        width: 16rem;
+      }
+      .services-icon {
+        background-color: #1188bc;
+        width: 40px;
+        height: 40px;
+        border-radius: 50px;
+        color: white;
+      }
+    }
+  }
+}
+.services-container .services-text {
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .text {
+    max-width: 650px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    font-size: 16px;
+  }
+  .text-btn {
+    appearance: none;
+    font-size: 14px;
+
+    cursor: pointer;
+    width: fit-content;
+    border-radius: 0.25em;
+    -webkit-border-radius: 0.25em;
+    -moz-border-radius: 0.25em;
+    -ms-border-radius: 0.25em;
+    -o-border-radius: 0.25em;
+  }
+  .text-btn::before {
+    content: "READ MORE";
+    text-transform: capitalize;
+  }
+  .text-btn:checked::before {
+    content: "READ LESS";
+  }
+  .text:has(+ .text-btn:checked) {
+    -webkit-line-clamp: initial;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .services-container {
+    flex-direction: column;
+
+    .services-card-div {
+      flex-direction: column;
+    }
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+  .services-container {
+    flex-direction: column;
+
+    .services-card-div {
+      flex-direction: column;
+    }
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .services-container {
+    .services-card-div {
+      flex-direction: column;
+    }
+  }
+}
